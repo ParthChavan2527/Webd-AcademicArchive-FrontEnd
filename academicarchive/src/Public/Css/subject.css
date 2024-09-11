@@ -1,0 +1,20 @@
+.subject-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .meteor-card {
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
