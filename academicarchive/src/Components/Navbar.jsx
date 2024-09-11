@@ -49,7 +49,7 @@ const Navbar = ({handleDarkMode , mode}) => {
               htmlFor="flexSwitchCheckDefault"
               style={{ color: mode === 'light' ? 'black' : 'white' }}
             >
-              {mode === 'light' ? 'Enable Dark Mode' : 'Enable Light Mode'}
+              {mode === 'light' ? 'Dark Mode' : 'Light Mode'}
             </label>
           </div>
           <StudentProfile />

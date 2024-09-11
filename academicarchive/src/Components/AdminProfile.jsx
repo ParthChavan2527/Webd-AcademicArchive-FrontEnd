@@ -75,11 +75,11 @@ export default function ProfileDrawer() {
         {/* contributions */}
 
         <ListItem key="Contributions" disablePadding>
-          <ListItemButton onClick={()=>{navigate('/contribution')}}>
+          <ListItemButton onClick={()=>{navigate('/admin/contribution')}}>
             <ListItemIcon>
               <InboxIcon />
             </ListItemIcon>
-            <ListItemText primary="Contributions"/>
+            <ListItemText primary=" Your Contributions"/>
           </ListItemButton>
         </ListItem>
       </List>

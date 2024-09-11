@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom'
 
 export default function Home({handleDarkMode , mode}) {
 
-    // const [mode , setMode] = useState('light');
+
 
     const navigate = useNavigate();
     const [selectedSemester, setSelectedSemester] = useState('');
@@ -17,14 +17,6 @@ export default function Home({handleDarkMode , mode}) {
     const handleSemesterChange = (semseter)=>{
         setSelectedSemester(semseter);
     }
-    // const handleDarkMode = ()=>{
-    //     if(mode === 'light'){
-    //         setMode('dark');
-    //     }
-    //     else{
-    //         setMode('light');
-    //     }
-    // }
 
     const subjectsData = [
         {
@@ -93,7 +85,36 @@ export default function Home({handleDarkMode , mode}) {
             imageUrl: "https://cdn.pixabay.com/photo/2020/09/23/03/54/background-5594879_1280.jpg",
             semester : 3,
         },
-
+        {
+            title: "Computer Network",
+            description: "Computer Networks notes and questions.",
+            imageUrl: "https://cdn.pixabay.com/photo/2016/10/11/21/43/geometric-1732847_1280.jpg",
+            semester : 4,
+        },
+        {
+            title: "Design Analysis",
+            description: "Design Analysis notes and questions.",
+            imageUrl: "https://cdn.pixabay.com/photo/2023/07/25/18/42/vector-graphic-8149677_1280.jpg",
+            semester : 5,
+        },
+        {
+            title: "DBMS",
+            description: "DBMS notes and questions.",
+            imageUrl: "https://cdn.pixabay.com/photo/2020/03/17/17/46/database-4941338_1280.png",
+            semester : 6,
+        },
+        {
+            title: "FinTech",
+            description: "FinTech notes and questions.",
+            imageUrl: "https://cdn.pixabay.com/photo/2020/04/04/04/22/setting-5000777_1280.png",
+            semester : 7,
+        },
+        {
+            title: "Introduction To Finance",
+            description: "Introduction To Finance notes and questions.",
+            imageUrl: "https://cdn.pixabay.com/photo/2024/05/20/08/38/business-8774165_1280.png",
+            semester : 8,
+        },
     ];
 
     const filteredSubjects = selectedSemester
@@ -111,7 +132,7 @@ export default function Home({handleDarkMode , mode}) {
         <>
             <Navbar handleDarkMode={handleDarkMode} mode = {mode}/>
             <div style={containerStyle}>
-            <SelectSem onSemesterChange={handleSemesterChange} />   
+            <SelectSem mode = {mode} onSemesterChange={handleSemesterChange} />   
             <Button variant = "contained"
                 sx = {{
                     position: 'absolute', 
@@ -141,7 +162,7 @@ export default function Home({handleDarkMode , mode}) {
             </Grid>
 
             </div>
-            <Footer/>
+            <Footer mode = {mode}/>
     </>
     )
 }

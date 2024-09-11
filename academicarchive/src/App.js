@@ -10,8 +10,7 @@ import Content from './Components/Content';
 import About from './Components/About';
 import ContactUs from './Components/ContactUs';
 import Admin from './Components/Admin';
-// import { ThemeProvider } from './Components/ThemeContext';
-
+import AdminContributions from './Components/AdminContributions';
 
 function App() {
 
@@ -45,12 +44,13 @@ function App() {
         <Route path="/home" element={<Home handleDarkMode={handleDarkMode} mode = {mode}/>} /> 
         <Route path="/profile" element={<Profile/>} /> 
         <Route path="/settings" element={<Settings/>} /> 
-        <Route path="/contribution" element={<Contributions/>} /> 
+        <Route path="/contribution" element={<Contributions uploads = {uploads}/>} /> 
         <Route path="/upload" element={<Upload onUpload = {handleUpload}/>} /> 
         <Route path="/content" element={<Content/>} /> 
         <Route path="/about" element={<About/>} /> 
         <Route path="/contact" element={<ContactUs />} /> 
         <Route path="/admin" element={<Admin />} /> 
+        <Route path="/admin/contribution" element={<AdminContributions/>} /> 
       </Routes>
     </Router>
   );

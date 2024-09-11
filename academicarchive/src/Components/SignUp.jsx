@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Box, Container, TextField, Button, Typography} from '@mui/material';
 import { styled } from '@mui/system';
 import { useNavigate } from 'react-router-dom';
-import { animateCircles } from '../Animation/signup-animaiton'; // Import the animation function
+import { animateCircles } from '../Animation/signup-animaiton';
 
 const SignUpItems = styled(Container)(({ theme }) => ({
   height: 'auto',
